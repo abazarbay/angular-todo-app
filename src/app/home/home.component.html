@@ -1,0 +1,25 @@
+<h1>To-Do List</h1>
+<div class="content">
+    <div class="task-input">
+        <input [(ngModel)]="newTask" placeholder="Enter a task..." />
+        <button (click)="addTask()">Add Task</button>
+    </div>
+    <ul>
+        <li *ngFor="let task of tasks; let i = index" [class.completed]="task.completed">
+            <span (click)="completeTask(i)">{{ task.name }}</span>
+            <div class="task-actions">
+                <button (click)="completeTask(i)">
+                    {{ task.completed ? 'Undo' : 'Completed' }}
+                </button>
+                <button (click)="deleteTask(i)">Delete</button>
+            </div>
+        </li>
+    </ul>
+    <div class="images-container" style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
+        <img src="assets/img1.webp" alt="Image 1" style="width: 450px; height: 300px;" />
+        <img src="assets/img2.webp" alt="Image 2" style="width: 450px; height: 300px;" />
+    </div>
+    <button (click)="clearCompleted()" class="clear-completed-btn" *ngIf="hasCompletedTasks" style="margin-top: 20px;">
+        Clear Completed Tasks
+    </button>
+</div>

@@ -1,0 +1,84 @@
+.content {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+
+.task-input {
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-input button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+}
+
+.task-input button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+li button:hover {
+    background-color: #cc0000;
+}
+
+.task-actions button:first-of-type {
+    background-color: green;
+    color: white;
+}
+
+.task-actions button:first-of-type:hover {
+    background-color: #45a049;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
